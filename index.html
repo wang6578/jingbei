@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>景喻景贝水贝限定SBTI测试</title>
+    <style>
+        body {
+            font-family: "Microsoft YaHei", sans-serif;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 20px;
+            background: #f5f7fa;
+            color: #333;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        .question {
+            margin: 25px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        .question p {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .options {
+            display: grid;
+            gap: 10px;
+        }
+        .option {
+            padding: 12px;
+            background: #e9ecef;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: left;
+        }
+        .option:hover {
+            background: #dee2e6;
+            transform: translateX(5px);
+        }
+        .option.selected {
+            background: #4CAF50;
+            color: white;
+        }
+        #submitBtn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 30px;
+        }
+        #submitBtn:hover {
+            background: #1976D2;
+        }
+        #result {
+            margin-top: 30px;
+            padding: 25px;
+            background: #e3f2fd;
+            border-radius: 10px;
+            display: none;
+        }
+        .hidden {
+            display: none;
+        }
+        .easter-egg {
+            margin-top: 20px;
+            padding: 20px;
+            background: #fff3e0;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px dashed #ff9800;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌟 景喻景贝水贝限定版SBTI测试 🌟</h1>
+        <p style="text-align: center; color: #666;">传说中，只有懂串子梗的人才能解锁终极彩蛋！</p >
+        
+        <div id="quiz">
+            <!-- 问题1 -->
+            <div class="question">
+                <p>1. 刷到"贝贝比你右脚痒"这句话时，你的第一反应是？</p >
+                <div class="options">
+                    <button class="option" data-score="A">A. 直接笑到打鸣，立刻转发给同好</button>
+                    <button class="option" data-score="B">B. 愣了一下，然后开始疯狂搜索这句话是什么梗</button>
+                    <button class="option" data-score="C">C. 面无表情：又是什么奇怪的黑话？</button>
+                    <button class="option" data-score="D">D. 直接跳过，完全没get到笑点</button>
+                </div>
+            </div>
+
+            <!-- 问题2 -->
+            <div class="question">
+                <p>2. 朋友问你"景贝99吗？"你会怎么回答？</p >
+                <div class="options">
+                    <button class="option" data-score="A">A. 必须99！锁死！景贝szd！</button>
+                    <button class="option" data-score="B">B. 犹豫：99是什么意思？是祝福吗？</button>
+                    <button class="option" data-score="C">C. 疑惑：景贝？那是什么东西？</button>
+                    <button class="option" data-score="D">D. 直接反问：你在说什么？听不懂人话？</button>
+                </div>
+            </div>
+
+            <!-- 问题3 -->
+            <div class="question">
+                <p>3. 提到"水贝"，你脑子里第一个冒出来的是？</p >
+                <div class="options">
+                    <button class="option" data-score="A">A. 串子圣地！水贝=快乐老家</button>
+                    <button class="option" data-score="B">B. 好像是个地名？卖黄金的？</button>
+                    <button class="option" data-score="C">C. 没听过，完全陌生的词汇</button>
+                    <button class="option" data-score="D">D. 以为是某种水生贝类生物</button>
+                </div>
+            </div>
+
+            <!-- 问题4 -->
+            <div class="question">
+                <p>4. 当有人说"贝贝好"，你会下意识接下一句？</p >
+                <div class="options">
+                    <button class="option" data-score="A">A. 贝贝好！贝贝比你都好！</button>
+                    <button class="option" data-score="B">B. 贝贝是谁？可以吃吗？</button>
+                    <button class="option" data-score="C">C. 礼貌回复：谢谢，你也很好</button>
+                    <button class="option" data-score="D">D. 完全没反应，以为是普通夸奖</button>
+                </div>
+            </div>
+
+            <!-- 问题5 -->
+            <div class="question">
+                <p>5. 以下哪个词，让你瞬间联想到世界杯相关？</p >
+                <div class="options">
+                    <button class="option" data-score="A">A. 贝贝比你右脚痒</button>
+                    <button class="option" data-score="B">B. 景贝99</button>
+                    <button class="option" data-score="C">C. 水贝串子</button>
+                    <button class="option" data-score="D">D. 完全联想不到</button>
+                </div>
+            </div>
+
+            <button id="submitBtn">提交测试，查看你的限定人格！</button>
+        </div>
+
+        <div id="result">
+            <h2>🎊 你的SBTI测试结果 🎊</h2>
+            <div id="resultText"></div>
+            <div id="easterEgg" class="easter-egg hidden">
+                <h3>🎉 恭喜你解锁终极彩蛋！🎉</h3>
+                <p>⚽ 世界杯！贝贝好！贝贝比你右脚痒！景贝99！⚽</p >
+                <p style="font-size: 24px; font-weight: bold; color: #e91e63;">串子DNA动了！你是真正的懂梗人！</p >
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let answers = [];
+        const options = document.querySelectorAll('.option');
+        const submitBtn = document.getElementById('submitBtn');
+        const resultDiv = document.getElementById('result');
+        const resultText = document.getElementById('resultText');
+        const easterEgg = document.getElementById('easterEgg');
+
+        options.forEach(option => {
+            option.addEventListener('click', () => {
+                // 清除同组其他选中状态
+                const parent = option.parentElement;
+                parent.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
+                // 标记当前选中
+                option.classList.add('selected');
+                // 记录答案
+                const questionIndex = Array.from(document.querySelectorAll('.question')).indexOf(option.closest('.question'));
+                answers[questionIndex] = option.dataset.score;
+            });
+        });
+
+        submitBtn.addEventListener('click', () => {
+            if (answers.length < 5 || answers.includes(undefined)) {
+                alert('请回答完所有问题哦！');
+                return;
+            }
+
+            // 统计A选项数量
+            const aCount = answers.filter(ans => ans === 'A').length;
+            let result = '';
+
+            if (aCount === 5) {
+                result = `
+                    <p>🔥 你的SBTI人格是：【终极串子·景贝狂热粉】🔥</p >
+                    <p>你是天选懂梗人！贝贝比你右脚痒、景贝99、水贝串子这些梗信手拈来，世界杯DNA直接拉满！</p >
+                    <p>建议立刻去水贝进货，然后给所有同好发"贝贝好"！</p >
+                `;
+                easterEgg.classList.remove('hidden');
+            } else if (aCount >= 3) {
+                result = `
+                    <p>✨ 你的SBTI人格是：【入门串子·景贝路人粉】✨</p >
+                    <p>你懂一半的梗，偶尔能跟上节奏，属于串子圈的边缘人。再刷几遍贝贝相关内容，你也能解锁终极彩蛋！</p >
+                `;
+            } else if (aCount >= 1) {
+                result = `
+                    <p>💡 你的SBTI人格是：【吃瓜路人·半懂不懂】💡</p >
+                    <p>你听过一些梗，但没完全get到精髓，属于"我好像知道，但又说不出来"的状态，多刷点串子内容就能解锁啦！</p >
+                `;
+            } else {
+                result = `
+                    <p>🌍 你的SBTI人格是：【完全路人·次元壁外】🌍</p >
+                    <p>这些梗对你来说完全是外星语言，建议直接去问懂的朋友，不然永远不知道"贝贝比你右脚痒"是什么快乐源泉！</p >
+                `;
+            }
+
+            resultText.innerHTML = result;
+            resultDiv.style.display = 'block';
+            // 滚动到结果区域
+            resultDiv.scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
